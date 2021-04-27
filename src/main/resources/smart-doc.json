@@ -1,0 +1,20 @@
+{
+  "outPath": "src/main/resources/static/doc",
+  "serverUrl": "http://127.0.0.1:8080", //设置服务器地址,非必须
+  "isStrict": false, //是否开启严格模式
+  "allInOne": true,  //是否将文档合并到一个文件中，一般推荐为true
+  "showAuthor":true,//是否显示接口作者名称，默认是true,不想显示可关闭
+  "requestFieldToUnderline":false, //自动将驼峰入参字段在文档中转为下划线格式,//@since 1.8.7 版本开始
+  "responseFieldToUnderline":false,//自动将驼峰入参字段在文档中转为下划线格式,//@since 1.8.7 版本开始
+  "requestHeaders": [ //设置请求头，没有需求可以不设置
+    {
+      "name": "token",
+      "type": "string",
+      "desc": "token",
+      "required": true
+    }
+  ],
+  "responseBodyAdvice":{ //自smart-doc 1.9.8起，ResponseBodyAdvice统一返回设置，可用ignoreResponseBodyAdvice tag来忽略
+    "className":"com.power.common.model.CommonResult" //通用响应体
+  }
+}
