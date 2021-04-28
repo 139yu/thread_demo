@@ -34,11 +34,11 @@ public class RedPacketRecordEntity implements Serializable {
 	/**
 	 * 红包ID
 	 */
-	private Long redPacketId;
+	private String redPacketId;
 	/**
 	 * 抢到红包用户的用户标识
 	 */
-	private Integer uid;
+	private Long uid;
 	/**
 	 * 创建时间
 	 */

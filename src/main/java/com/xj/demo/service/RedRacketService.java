@@ -17,7 +17,7 @@ import java.util.Map;
 public interface RedRacketService extends IService<RedRacketEntity> {
     List<RedRacketEntity> getList();
 
-    void create(CreateRedPacket createRedPacket);
+    String create(CreateRedPacket createRedPacket);
 
     void startTwoSeckil(String redPacketId);
 }

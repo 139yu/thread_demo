@@ -13,6 +13,14 @@
         <result property="createTime" column="create_time"/>
         <result property="version" column="version"/>
     </resultMap>
+    <select id="getBalance" resultType="java.lang.Integer">
+        SELECT
+        	total_amount - ( SELECT sum( amount ) FROM red_packet_record WHERE red_packet_id = #{redPacketId} )
+        FROM
+        	red_racket
+        WHERE
+        	red_packet_id = #{redPacketId}
+    </select>
 
 
 </mapper>

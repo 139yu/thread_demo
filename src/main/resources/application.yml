@@ -6,6 +6,8 @@ spring:
     username: root
     password: 520..xj/
   redis:
-    host: locahost
+    host: localhost
     port: 6379
     database: 0
+mybatis-plus:
+  mapper-locations: classpath:dao/**/*.xml

@@ -31,8 +31,8 @@ public class RedRacketController {
      */
     @PostMapping("/create")
     public CommonResult create(@RequestBody CreateRedPacket createRedPacket){
-        redRacketService.create(createRedPacket);
-        return CommonResult.ok();
+        String s = redRacketService.create(createRedPacket);
+        return CommonResult.ok().setResult(s);
     }
 
     @PostMapping("startTwoSeckil")
@@ -40,4 +40,6 @@ public class RedRacketController {
         redRacketService.startTwoSeckil(redPacketId);
         return CommonResult.ok();
     }
+
+
 }
